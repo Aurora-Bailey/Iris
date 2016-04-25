@@ -87,4 +87,16 @@ gulp.task('production_client', ['css', 'js', 'html'], function () {
         .pipe(gulp.dest('dist/client'));
 });
 
+var filesToMoveServer = [
+    './bin*/ws*.*',
+    './bin*/cert*.*',
+    './bin*/priv*.*',
+    './my_modules*/*.*',
+    './temp*/*.*',
+    './package.json'
+];
+gulp.task('production_server', function () {
+    gulp.src(filesToMoveServer)
+        .pipe(gulp.dest('dist/server'));
+});
 
