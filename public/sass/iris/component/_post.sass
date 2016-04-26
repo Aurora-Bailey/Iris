@@ -1,0 +1,211 @@
+@import "../variables"
+@import "../mixins"
+
+.post
+  background-color: white
+  max-width: 560px
+  min-width: 320px
+  margin: 25px 0px 5px
+
+  .header
+    padding: 10px
+
+    .picture
+      width: 50px
+      height: 50px
+      @include border-radius(30px)
+      overflow: hidden
+      background-size: cover
+      background-position: center
+      background-color: #DDD
+      display: inline-block
+
+    .info
+      display: inline-block
+      vertical-align: top
+      color: #555555
+      padding: 5px 2px
+
+      .name
+        font-weight: bold
+
+      .date
+        color: #999999
+
+  .friends
+    text-align: center
+    margin-bottom: 10px
+
+    .hold-shape
+      width: 40px
+      height: 40px
+      position: relative
+      display: inline-block
+      margin: 0 5px
+
+
+      .picture-wrapper
+        width: 40px
+        height: 40px
+        position: absolute
+        top: 0
+        left: 0
+        overflow: hidden
+        transition: width 0.5s, height 0.5s, top 0.5s, left 0.5s
+
+        .picture
+          width: 40px
+          height: 40px
+          @include border-radius(100px)
+          overflow: hidden
+          background-size: cover
+          background-position: center
+          background-color: #DDD
+          transition: width 0.5s, height 0.5s
+
+        .name
+          background-color: white
+          font-weight: bold
+          text-align: center
+          width: 80px
+          position: absolute
+          left: -20px
+          transition: left 0.5s
+
+    .hold-shape:hover
+      .picture-wrapper
+        width: 80px
+        height: 120px
+        top: -20px
+        left: -20px
+        z-index: 80
+
+      .picture
+        width: 80px
+        height: 80px
+
+      .name
+        left: 0
+
+  .user-input
+    padding: 0 25px 25px 25px
+    font-size: 16px
+
+  .comments
+    padding: 0 25px 25px 25px
+
+    .picture-wrapper
+      background: none
+      border: none
+      padding: 2px 5px 2px 2px
+
+      .fa
+        line-height: 30px
+        font-size: 20px
+        vertical-align: text-bottom
+
+      .user-picture
+        width: 30px
+        height: 30px
+        @include border-radius(30px)
+        overflow: hidden
+        background-size: cover
+        background-position: center
+        background-color: #DDD
+        display: inline-block
+        vertical-align: text-bottom
+
+  .auto-link
+    color: #777
+    display: block
+    overflow: hidden
+
+
+    .ytIframe
+      display: block
+      background-color: black
+      max-width: 100%
+
+    .video-gifv
+      display: block
+      max-width: 100%
+
+    .link-title
+      font-size: 20px
+      padding: 5px 10px
+      margin: 0
+
+    .link-description
+      padding: 5px 10px
+      margin: 0
+
+    .link-url
+      color: $accent
+      text-decoration: none
+      padding: 5px 10px
+      word-wrap: break-word
+      margin: 0
+      display: block
+
+    .preview-text
+      margin: 15px
+
+    .preview-image
+      position: relative
+      min-height: 150px
+      cursor: pointer
+      display: block
+      text-decoration: none
+
+      img
+        max-width: 100%
+        max-height: 70vh
+        margin: auto
+        display: block
+
+      .icon-overlay:hover
+        opacity: 0.4
+
+      .icon-overlay
+        opacity: 0.6
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        margin: auto
+        line-height: 150px
+        width: 150px
+        height: 150px
+        font-size: 150px
+        text-align: center
+
+        .fa-youtube-play, .fa-circle
+          width: 150px
+          height: 150px
+          line-height: 150px
+          color: red
+          position: absolute
+          top: 0
+          left: 0
+
+        .fa-circle // fill in the youtube button
+          font-size: 100px
+          color: white
+
+        .fa-play-circle
+          color: #333
+          background-color: white
+          line-height: 150px
+          width: 150px
+          height: 150px
+          @include border-radius(100px)
+
+        .fa-external-link-square
+          color: #333
+          background-color: white
+          line-height: 150px
+          width: 150px
+          height: 150px
+          @include border-radius(30px)
+

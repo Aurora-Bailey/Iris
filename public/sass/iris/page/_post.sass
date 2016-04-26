@@ -1,0 +1,58 @@
+@import "../variables"
+@import "../mixins"
+
+#page-post
+  .pretty-box
+    background-color: white
+    padding: 20px
+    margin-bottom: 20px
+
+    .profile-circle
+      position: relative
+      display: inline-block
+      overflow: hidden
+      padding: 10px
+      width: 130px
+      height: 175px
+      cursor: pointer
+
+      .image
+        @include border-radius(200px)
+        overflow: hidden
+        height: 110px
+        width: 110px
+        background-size: cover
+        background-position: center
+        background-color: #DDD
+
+      .title
+        text-align: center
+        font-size: 16px
+
+    .profile-circle.active .image
+      border: 5px solid $accent
+
+    .profile-circle.active .title
+      color: white
+      background-color: $accent
+      @include border-radius(10px)
+
+  .button-bar
+    //padding-bottom: 15px
+
+  .pretty-box:after,
+  .button-bar:after
+    content: "."
+    visibility: hidden
+    display: block
+    height: 0
+    clear: both
+
+  #post-link
+    color: $accent
+
+  .step-title
+    padding: 10px
+    font-size: 16px
+    color: #777777
+    text-align: center

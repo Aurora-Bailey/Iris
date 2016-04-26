@@ -19,6 +19,10 @@ gulp.task('es6', function() {
         .pipe(order([
             "prototypes.js",
             "lib.js",
+            "route.js",
+            "websocket.js",
+            "facebook.js",
+            "angular.js",
             "main.js",
             "**/*.js"
         ]))
@@ -32,6 +36,7 @@ gulp.task('js', ['es6'], function() {
         .pipe(order([
             "jquery.min.js",
             "jquery*.js",
+            "angular*.js",
             "bootstrap*.js",
             "main*.js",
             "**/*.js"

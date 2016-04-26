@@ -1,0 +1,71 @@
+@import "../variables"
+@import "../mixins"
+
+a
+  color: $primary
+
+.light-weight
+  font-weight: 400
+
+.btn-accent
+  @include button-variant($accent-contrast, $accent, darken($accent, 20%))
+
+.btn-facebook
+  @include button-variant(white, #3B5998, darken(#3B5998, 20%))
+
+.btn-twitter
+  @include button-variant(white, #00aced, darken(#00aced, 20%))
+
+.narrow-wrapper
+  width: 630px
+  margin: auto
+  @media (max-width: 630px)
+    width: auto
+
+.hide
+  display: none
+
+.backdrop
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  opacity: 0.6
+  background-color: white
+
+.fullscreen-image
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: rgba(255,255,255, 0.6)
+  z-index: 120
+
+  img
+    display: inline-block
+    max-width: 95%
+    max-height: 95%
+    margin: auto
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+
+.post-container
+  position: relative
+  text-align: center
+
+  .post-column
+    text-align: left
+    display: inline-block
+    width: 560px
+    max-width: 100%
+    vertical-align: text-top
+    margin-left: 30px
+
+  .post-column:first-child
+    margin: 0
+

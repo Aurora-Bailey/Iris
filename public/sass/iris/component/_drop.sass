@@ -1,0 +1,20 @@
+@import "../variables"
+@import "../mixins"
+
+#drop-overlay
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: rgba(0, 0, 0, 0.6)
+  z-index: 10000
+  text-align: center
+  line-height: 100vh
+  color: white
+  font-size: 30px
+  font-weight: bold
+  overflow: hidden
+
+  .title
+    pointer-events: none
