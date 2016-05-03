@@ -3,91 +3,56 @@
 
 body
   padding-left: 50px
-  padding-top: 0
-  transition: padding-top 0.5s, padding-left 0.5s
+  padding-bottom: 0
 
-#sidenav,
-#topnav
+#sidenav
   background-color: #333
-  color: white
+  overflow: hidden
   position: fixed
   top: 0
   left: 0
-  overflow: hidden
-
-  .icon
-    width: 50px
-    height: 50px
-    font-size: 25px
-    line-height: 50px
-    text-align: center
-    display: inline-block
-
-#topnav
-  width: 100vw
-  height: 0
-  transition: height 0.1s
-  text-align: center
-  z-index: 101
-
-  .icon
-    position: absolute
-    top: 0
-    left: 0
-    cursor: pointer
-
-  .icon:hover
-    background-color: $accent
-
-  .title
-    display: inline-block
-    line-height: 50px
-    font-size: 18px
-    font-weight: bold
-
-#sidenav
+  bottom: auto
+  color: white
   width: 50px
-  height: 100vh
-  transition: width 0.1s
+  height: 100%
   z-index: 100
 
   .item
-    width: 180px
+    width: 50px
     height: 50px
     cursor: pointer
-
-    .title
-      line-height: 50px
-      padding: 0 5px
-      font-weight: bold
-      font-size: 18px
-      display: inline-block
-      pointer-events: none
+    display: inline-block
+    line-height: 50px
+    text-align: center
+    font-size: 25px
+    transition: background-color 0.2s, color 0.2s
+    //border-radius: 10px 0 0 10px
 
   .item:hover
-    background-color: $accent
-    border-top-left-radius: 10px
-    border-bottom-left-radius: 10px
+    background-color: lighten(#333, 15%)
 
   .item.active
-    background-color: #e9eff0
-    color: black
-    border-top-left-radius: 10px
-    border-bottom-left-radius: 10px
-
-#sidenav.open
-  width: 180px
+    background-color: $accent
 
 
 
 
-@media (max-width: 400px)
+@media (max-width: 450px)
   #sidenav
-    width: 0
+    top: auto
+    bottom: 0
+    width: 100%
+    min-width: 320px
+    height: 40px
+    white-space: nowrap
 
-  #topnav
-    height: 50px
+    .item
+      width: 25%
+      height: 40px
+      line-height: 40px
+      //float: right
+      //border-radius: 0 0 10px 10px
 
   body
     padding-left: 0
-    padding-top: 50px
+    padding-bottom: 50px

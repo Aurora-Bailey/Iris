@@ -52,24 +52,6 @@ class Lib {
         return newArray;
     }
 
-    static backdrop($jObj, clickback) {
-        var $backdrop = $('<div></div>');
-        $backdrop.addClass('backdrop');
-        //$backdrop.addClass('hide');
-        $backdrop.css({'z-index': parseInt($jObj.css('z-index')) - 1, 'display': 'none'});
-        $backdrop.click(clickback);
-        $('body').append($backdrop);
-        $backdrop.open = function () {
-            //$backdrop.removeClass('hide');
-            $backdrop.fadeIn(100);
-        };
-        $backdrop.close = function () {
-            //$backdrop.addClass('hide');
-            $backdrop.fadeOut(100);
-        };
-        return $backdrop;
-    };
-
     static getDropText(dropEvent) {
         // Identify the dropped information
         var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;

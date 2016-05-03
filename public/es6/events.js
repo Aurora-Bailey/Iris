@@ -4,21 +4,6 @@ $('.ws-echo').click(() => {
 });
 
 //navigation
-var nav_backdrop = Lib.backdrop($('#sidenav'), function(){
-    nav_backdrop.close();
-    $('#sidenav').removeClass('open');
-});
-$('#sidenav .item:not(.nav-bars)').click(() => {
-    nav_backdrop.click();
-});
-$('.nav-bars').click(() => {
-    if($('#sidenav').hasClass('open')){
-        nav_backdrop.click();
-    }else{
-        $('#sidenav').addClass('open');
-        nav_backdrop.open();
-    }
-});
 $('.nav-home').click(() => {
     WS.sendObj({x: 'page', z: 'home'});
 });
