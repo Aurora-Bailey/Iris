@@ -2,7 +2,7 @@
 @import "../mixins"
 
 .post
-  background-color: white
+  background-color: $foreground
   max-width: 560px
   min-width: 320px
   margin: 25px 0px 5px
@@ -17,20 +17,21 @@
       overflow: hidden
       background-size: cover
       background-position: center
-      background-color: #DDD
+      background-color: $fore-contrast
       display: inline-block
 
     .info
       display: inline-block
       vertical-align: top
-      color: #555555
+      color: $fore-contrast
       padding: 5px 2px
 
       .name
         font-weight: bold
 
       .date
-        color: #999999
+        color: $fore-contrast
+        opacity: 0.6
 
   .friends
     text-align: center
@@ -60,11 +61,11 @@
           overflow: hidden
           background-size: cover
           background-position: center
-          background-color: #DDD
+          background-color: $fore-contrast
           transition: width 0.5s, height 0.5s
 
         .name
-          background-color: white
+          background-color: $foreground
           font-weight: bold
           text-align: center
           width: 80px
@@ -111,19 +112,19 @@
         overflow: hidden
         background-size: cover
         background-position: center
-        background-color: #DDD
+        background-color: $fore-contrast
         display: inline-block
         vertical-align: text-bottom
 
   .auto-link
-    color: #777
+    color: $fore-contrast
     display: block
     overflow: hidden
 
 
     .ytIframe
       display: block
-      background-color: black
+      background-color: $fore-contrast
       max-width: 100%
 
     .video-gifv

@@ -6,13 +6,13 @@ body
   padding-bottom: 0
 
 #sidenav
-  background-color: #333
+  background-color: $fore-contrast
+  color: $foreground
   overflow: hidden
   position: fixed
   top: 0
   left: 0
   bottom: auto
-  color: white
   width: 50px
   height: 100%
   z-index: 100
@@ -26,10 +26,9 @@ body
     text-align: center
     font-size: 25px
     transition: background-color 0.2s, color 0.2s
-    //border-radius: 10px 0 0 10px
 
   .item:hover
-    background-color: lighten(#333, 15%)
+    background-color: lighten($fore-contrast, 15%)
 
   .item.active
     background-color: $accent
@@ -50,8 +49,6 @@ body
       width: 25%
       height: 40px
       line-height: 40px
-      //float: right
-      //border-radius: 0 0 10px 10px
 
   body
     padding-left: 0

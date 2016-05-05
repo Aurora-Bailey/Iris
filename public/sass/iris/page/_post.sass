@@ -3,7 +3,7 @@
 
 #page-post
   .pretty-box
-    background-color: white
+    background-color: $foreground
     padding: 20px
     margin-bottom: 20px
 
@@ -23,7 +23,7 @@
         width: 110px
         background-size: cover
         background-position: center
-        background-color: #DDD
+        background-color: $fore-contrast
 
       .title
         text-align: center
@@ -33,7 +33,7 @@
       border: 5px solid $accent
 
     .profile-circle.active .title
-      color: white
+      color: $accent-contrast
       background-color: $accent
       @include border-radius(10px)
 
@@ -54,5 +54,6 @@
   .step-title
     padding: 10px
     font-size: 16px
-    color: #777777
+    color: $fore-contrast
+    opacity: 0.7
     text-align: center
